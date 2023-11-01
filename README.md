@@ -8,6 +8,17 @@
 
 Modified from RL Baselines3 Zoo.
 
+Run learning with 
+`python -m rl_zoo3.train --algo ppo --env rbcEnv-v0 -P --tensorboard-log /tmp/ppo-1`
+
+View plots with
+`tensorboard serve --logdir .`
+
+See simulations with
+`python enjoy.py --algo ppo --env rbcEnv-v0 -f logs/ --exp-id 10 --load-best`
+
+Hyperparameter tuning with
+`rl-baselines3-zoo % python -m rl_zoo3.train --algo trpo --env rbcEnv-v0 -P --tensorboard-log /tmp/trpo-1 -n 50000 -optimize --n-trials 10`
 
 # RL Baselines3 Zoo: A Training Framework for Stable Baselines3 Reinforcement Learning Agents
 

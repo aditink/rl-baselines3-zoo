@@ -223,5 +223,3 @@ rbcEnv-v0:
   cg_max_steps: 20
   target_kl: 0.1
   gae_lambda: 0.8
-  net_arch: medium
-  activation_fn: tanh

@@ -314,7 +314,7 @@ class RbcEnv(gym.Env):
         intersect = ma1_set.intersection(ma2_set)
         intersect_penalty = -len(intersect)*100
         # Reward for velocity.
-        velocity_reward = (abs(self.train_1[self._VEL]) + abs(self.train_2[self._VEL]))*10
+        velocity_reward = (abs(self.train_1[self._VEL]) + abs(self.train_2[self._VEL]))*100
         # Scaling to try to keep the total between -5 and 5.
         scaling_factor = 1000000.
         # Reward for terminating \ penalty otherwise.
