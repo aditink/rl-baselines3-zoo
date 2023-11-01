@@ -186,3 +186,12 @@ Humanoid-v3:
 Swimmer-v3:
   <<: *mujoco-defaults
   gamma: 0.9999
+
+# Untuned
+rbcEnv-v0:
+  n_timesteps: !!float 1e5
+  policy: 'MultiInputPolicy'
+  n_steps: 8
+  gamma: 0.99
+  ent_coef: 0.0
+  learning_rate: !!float 1e-4

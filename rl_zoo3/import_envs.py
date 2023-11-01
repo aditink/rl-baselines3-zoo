@@ -3,6 +3,8 @@ from typing import Callable, Optional
 import gymnasium as gym
 from gymnasium.envs.registration import register
 
+from .rbc import RbcEnv
+
 from rl_zoo3.wrappers import MaskVelocityWrapper
 
 try:
@@ -62,3 +64,10 @@ for env_id in MaskVelocityWrapper.velocity_indices.keys():
         id=f"{name}NoVel-v{version}",
         entry_point=create_no_vel_env(env_id),  # type: ignore[arg-type]
     )
+
+# Register custom environment rbcEnv.
+register(
+    id="rbcEnv-v0",
+    entry_point=RbcEnv,
+    max_episode_steps=8000,
+)

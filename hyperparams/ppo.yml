@@ -580,3 +580,12 @@ Walker2d-v3:
   gae_lambda: 0.95
   max_grad_norm: 1
   vf_coef: 0.871923
+
+# Untuned
+rbcEnv-v0:
+  n_timesteps: !!float 1e5
+  policy: 'MultiInputPolicy'
+  n_steps: 1000
+  gamma: 0.9
+  ent_coef: 0.0
+  learning_rate: !!float 1e-3

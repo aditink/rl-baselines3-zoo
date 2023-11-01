@@ -210,3 +210,18 @@ InvertedPendulumSwingupBulletEnv-v0:
   gae_lambda: 0.95
   gamma: 0.99
   learning_rate: 2.5e-4
+
+# A bit of tuning.
+rbcEnv-v0:
+  n_timesteps: !!float 1e4
+  policy: 'MultiInputPolicy'
+  n_steps: 64
+  gamma: 0.99
+  learning_rate: !!float 1e-3
+  batch_size: 8
+  n_critic_updates: 20
+  cg_max_steps: 20
+  target_kl: 0.1
+  gae_lambda: 0.8
+  net_arch: medium
+  activation_fn: tanh
